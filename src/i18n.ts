@@ -1,4 +1,6 @@
-module.exports = {
+import { generateI18n } from "./lib";
+
+export const i18n = generateI18n({
   'zh-CN': {
     'UDP Broker configurations.': 'UDP Broker 配置',
     'IP to bind for UDP broker': 'UDP 代理绑定 IP',
@@ -8,4 +10,4 @@ module.exports = {
     'Subscriber Lifetime (s). 0 for disabled': '订阅者生命周期（秒）。0 为禁用。',
     'Subscribers': '订阅者',
   },
-};
+});

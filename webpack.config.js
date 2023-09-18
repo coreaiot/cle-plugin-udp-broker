@@ -5,12 +5,21 @@ module.exports = {
   target: 'node',
   externalsPresets: { node: true },
   entry: {
-    plugin: ['./src/index.js'],
+    plugin: ['./src/index.ts'],
   },
   devtool: false,
   mode: 'production',
+  module: {
+    rules: [
+      {
+        test: /\.ts$/,
+        use: 'ts-loader',
+        exclude: /node_modules/,
+      },
+    ],
+  },
   resolve: {
-    extensions: ['.json', '.js'],
+    extensions: ['.json', '.ts', '.js'],
   },
   output: {
     library: p.name,
@@ -18,4 +27,5 @@ module.exports = {
     filename: '[name].js',
     path: resolve(__dirname, 'build'),
   },
+  externals: ['bufferutil', 'utf-8-validate'],
 };

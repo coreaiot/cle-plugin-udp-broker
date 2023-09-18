@@ -1,4 +1,6 @@
-module.exports = {
+import { generateConfig } from './lib';
+
+export const config = generateConfig({
   description: 'UDP Broker configurations.',
   fields: [
     {
@@ -36,4 +38,4 @@ module.exports = {
       value: false,
     },
   ],
-};
+});

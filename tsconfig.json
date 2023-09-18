@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "ES2020",
+    "moduleResolution": "node",
+    "noImplicitAny": false,
+    "sourceMap": false,
+    "experimentalDecorators": true
+  },
+  "include": [
+    "src/*"
+, "src/lib/getBeacons.ts"  ]
+}
