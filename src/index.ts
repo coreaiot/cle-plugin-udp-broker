@@ -73,8 +73,6 @@ export async function init(self: Plugin, utils: Utils) {
       self.status.subscribers = self.status.subscribers.filter(s =>
         s.ts + ms > now
       );
-      saveStatus();
-      utils.updateStatus(self);
     }, 1000);
   }
 
@@ -135,12 +133,6 @@ export async function init(self: Plugin, utils: Utils) {
         }
         return;
       }
-
-      // const obj = JSON.parse(msg);
-      // if (obj.type === 'beaconEvent') {
-      //   await sendBeaconEvent(udp, gateways, beacons, obj);
-      //   return;
-      // }
     } catch (e) {
       self.logger.error(e);
       return;
