@@ -44,16 +44,18 @@ async function saveSubscribers(path: string, data) {
 export async function init(self: Plugin, utils: Utils) {
   const config = await utils.loadConfig(self);
 
-  utils.dashboardSocket.write(JSON.stringify({
-    topic: 'extra-tables',
-    data: [
-      {
-        id: self.name,
-        type: 'udp',
-        port: config.bindPort,
-      },
-    ],
-  }));
+  if (utils.dashboardSocket) {
+    utils.dashboardSocket.write(JSON.stringify({
+      topic: 'extra-tables',
+      data: [
+        {
+          id: self.name,
+          type: 'udp',
+          port: config.bindPort,
+        },
+      ],
+    }));
+  }
   const path = join(process.env.CLE_DATA, self.name + '.json');
   self.status.subscribers = await loadSubscribers(path);
 
