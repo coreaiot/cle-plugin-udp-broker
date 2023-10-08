@@ -1,5 +1,6 @@
 export * from './generateI18n';
 export * from './generateConfig';
+export * from './generateDocs';
 export * from './generateStatus';
 export * from './IPlugins';
 export * from './IUtils';

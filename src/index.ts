@@ -2,7 +2,7 @@ export * from './config';
 export * from './status';
 export * from './i18n';
 
-import { Plugin, Utils } from './lib';
+import { Plugin, Utils, generateDocs } from './lib';
 import { createSocket } from 'dgram';
 import { deflate, gzip } from 'zlib';
 import { join } from 'path';
@@ -274,3 +274,5 @@ export async function test(self: Plugin, utils: Utils) {
   console.log(config);
   self.logger.info('Test OK.');
 }
+
+export const docs = generateDocs();

@@ -3,3 +3,6 @@
 /node_modules
 /package-lock.json
 /pnpm-lock.yaml
+/docs/java/target
+/docs/dotnet/bin
+/docs/dotnet/obj
