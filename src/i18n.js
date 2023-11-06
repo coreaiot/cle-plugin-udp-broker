@@ -7,5 +7,7 @@ module.exports = {
     'Post outdated tags': '发送过期信标数据',
     'Subscriber Lifetime (s). 0 for disabled': '订阅者生命周期（秒）。0 为禁用。',
     'Subscribers': '订阅者',
+    'Invalid IPv4 address': '无效的 IPv4 地址',
+    'Invalid port number': '无效的端口号',
   },
 };
