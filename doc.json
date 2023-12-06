@@ -1,0 +1,12 @@
+{
+  "links": [
+    {
+      "typename": "IBeacon",
+      "url": "/#/development/http-api?ibeacon"
+    },
+    {
+      "typename": "ILocator",
+      "url": "/#/development/http-api?ilocator"
+    }
+  ]
+}
