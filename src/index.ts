@@ -2,7 +2,7 @@ export * from './config';
 export * from './status';
 export * from './i18n';
 
-import { Plugin, Utils, generateDocs } from './lib';
+import { Plugin, Utils, generateDocs, IGatewayResult } from '@lib';
 import { createSocket } from 'dgram';
 import { deflate, gzip } from 'zlib';
 import { join } from 'path';
@@ -249,7 +249,7 @@ export async function init(self: Plugin, utils: Utils) {
       const bsize = buf.readUint16LE(3);
       const n = (buf.length - 5) / bsize;
       for (let i = 0; i < n; ++i) {
-        const b = utils.parseBeaconResult(utils.projectChannels, buf, i * bsize + 5);
+        const b = utils.parseBeaconResult(buf, i * bsize + 5);
         data[b.mac] = b;
         delete b.mac;
       }
@@ -260,7 +260,18 @@ export async function init(self: Plugin, utils: Utils) {
   setInterval(() => intervalfn('locators', () => {
     const now = new Date().getTime();
     const ts = now - utils.projectEnv.locatorLifeTime;
-    const data = utils.packGatewaysByAddr(utils.activeLocators, ts);
+
+    const locators: IGatewayResult[] = [];
+    const buf = utils.ca.getLocatorsBuffer(0);
+    if (buf.length > 5) {
+      const bsize = buf.readUint16LE(3);
+      const n = (buf.length - 5) / bsize;
+      for (let i = 0; i < n; ++i) {
+        const l = utils.parseLocatorResult(buf, i * bsize + 5, ts);
+        locators.push(l);
+      }
+    }
+    const data = utils.packGatewaysByAddr(locators);
     return data;
   }), utils.projectEnv.locatorAuditTime);
 

@@ -1,5 +1,6 @@
 const { resolve } = require('path');
 const p = require('./package.json');
+const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 
 module.exports = {
   target: 'node',
@@ -13,13 +14,16 @@ module.exports = {
     rules: [
       {
         test: /\.ts$/,
-        use: 'ts-loader',
-        exclude: /node_modules/,
+        loader: 'ts-loader',
+        options: { allowTsInNodeModules: true }
       },
     ],
   },
   resolve: {
     extensions: ['.json', '.ts', '.js'],
+    plugins: [
+      new TsconfigPathsPlugin({}),
+    ],
   },
   output: {
     library: p.name,

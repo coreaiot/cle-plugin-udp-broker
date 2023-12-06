@@ -1,4 +1,4 @@
-import { generateStatus } from "./lib";
+import { generateStatus } from "@lib";
 
 export const status = generateStatus({
   fields: [

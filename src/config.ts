@@ -1,4 +1,4 @@
-import { generateConfig } from './lib';
+import { generateConfig } from '@lib';
 
 export const config = generateConfig({
   description: 'UDP Broker configurations.',

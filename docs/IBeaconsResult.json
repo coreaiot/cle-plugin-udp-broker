@@ -1,0 +1,44 @@
+{
+  "type": "sensors",
+  "data": {
+    "3cfad3b00001": {
+      "x": 1.2475358247756958,
+      "y": 2.3795104026794434,
+      "z": 0.75,
+      "rssi": -49.79572978797052,
+      "mapId": "BavVBMPeO4",
+      "zoneId": "BmEr3GEeA",
+      "lastGateway": "3cfad3b09ffe",
+      "nearestGateway": "3cfad3b09fcc",
+      "updatedAt": 1692424350520,
+      "calculatedAt": 1692424350519,
+      "userData": {
+        "0": {
+          "frequency": 5,
+          "battery": 90,
+          "power": {
+            "type": "Nordic",
+            "value": 0
+          },
+          "sos": false,
+          "recv": false,
+          "channel": 2402,
+          "method": 0
+        },
+        "8": {
+          "gSensors": [
+            1,
+            254,
+            62
+          ]
+        }
+      },
+      "userDataTs": {
+        "0": 1692424349496,
+        "8": 1692424350519
+      }
+    },
+    ...
+  },
+  "timestamp": 1692424350522
+}

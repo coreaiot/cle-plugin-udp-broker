@@ -1,0 +1,41 @@
+{
+  "type": "locators",
+  "data": {
+    "192.168.123.232": {
+      "mac": "3c:fa:d3:b0:9f:fe",
+      "angles": [],
+      "info": {
+        "version": "1.2.9",
+        "name": "1.2.9",
+        "type": "AOA",
+        "mapId": "BavVBMPeO4",
+        "zoneId": "SM7sMy96Z",
+        "elevation": 0,
+        "azimuth": 0,
+        "rotation": 0,
+        "errorDegree": 5.076,
+        "x": -1.85,
+        "y": 6.5,
+        "z": 2.73,
+        "modelName": "CL-GA25-P2",
+        "realModelName": "CL-GA25-P2",
+        "channels": [
+          {
+            "value": 2402,
+            "whitening": true
+          }
+        ],
+        "LAN": {
+          "ip": "192.168.123.232",
+          "mode": "dhcp",
+          "subnetMask": "255.255.255.0",
+          "defaultGateway": "192.168.123.1"
+        }
+      },
+      "updatedAt": 1692424942144,
+      "online": true
+    },
+    ...
+  },
+  "timestamp": 1692424942182
+}

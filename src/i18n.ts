@@ -1,4 +1,4 @@
-import { generateI18n } from "./lib";
+import { generateI18n } from "@lib";
 
 export const i18n = generateI18n({
   'zh-CN': {
