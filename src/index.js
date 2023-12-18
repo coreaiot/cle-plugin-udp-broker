@@ -76,7 +76,6 @@ async function init(self, env, utils, gateways, beacons) {
         s.ts + ms > now
       );
       saveStatus(self.status);
-      utils.updateStatus(self);
     }, 1000);
   }
   const timers = {};
@@ -122,7 +121,6 @@ async function init(self, env, utils, gateways, beacons) {
           ex.ts = new Date().getTime();
         }
         saveStatus(self.status);
-        utils.updateStatus(self);
         return;
       }
 
@@ -134,7 +132,6 @@ async function init(self, env, utils, gateways, beacons) {
           self.status.subscribers.splice(ex, 1);
           clearTimeout(timers[ex.id]);
           saveStatus(self.status);
-          utils.updateStatus(self);
         }
         return;
       }
@@ -270,10 +267,6 @@ async function init(self, env, utils, gateways, beacons) {
     }
     return data;
   }), env.gatewayAuditTime);
-
-  setInterval(() => {
-    utils.updateStatus(self);
-  }, 1000);
 
   return true;
 }
