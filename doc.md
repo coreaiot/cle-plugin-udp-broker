@@ -7,7 +7,7 @@
 ```txt
 subscribe[:数据格式][:订阅者 ID]
 
-e.g. subscribe:raw:John
+e.g. subscribe:json:John
 ```
 > 取消订阅
 ```txt
@@ -18,10 +18,11 @@ e.g. unsubscribe:John
 ## 数据格式
 |数据格式|说明|
 |---|---|
-|raw|默认。原始 JSON 格式|
+|json|默认。原始 JSON 格式|
 |deflate|使用 deflate 压缩 JSON|
 |gzip|使用 gzip 压缩 JSON|
 |zlib|同 `deflate`|
+|bin|二进制格式|
 
 ## 订阅者 ID
 默认为 `客户端的 IP`:`客户端的端口`
@@ -34,7 +35,7 @@ e.g. unsubscribe:John
 ```txt
 subscribe[:Data Format][:Subscriber ID]
 
-e.g. subscribe:raw:John
+e.g. subscribe:json:John
 ```
 > Unsubscribe
 ```txt
@@ -45,10 +46,11 @@ e.g. unsubscribe:John
 ## Data Format
 |Data Format|Description|
 |---|---|
-|raw|Default. Raw JSON format|
+|json|Default. Raw JSON format|
 |deflate|Use `deflate` to compress JSON|
 |gzip|Use `gzip` to compress JSON|
 |zlib|Same as `deflate`|
+|bin|Binary format|
 
 ## Subscriber ID
 Default to `Client side IP`:`Client side port`.

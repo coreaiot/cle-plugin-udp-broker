@@ -1,7 +1,6 @@
 interface IBeaconsResult {
   type: 'sensors';
   data: {
-    [IpAddressV4: string]: IBeacon;
+    [beaconMac: string]: IBeacon;
   };
-  timestamp: number;
 }

@@ -11,7 +11,7 @@ export const status = generateStatus({
         port: number;
         ts: number;
         value?: string;
-        compress: string;
+        format: string;
       }[],
     },
   ],

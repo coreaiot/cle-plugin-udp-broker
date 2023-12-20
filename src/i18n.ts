@@ -9,5 +9,11 @@ export const i18n = generateI18n({
     'Post outdated tags': '发送过期信标数据',
     'Subscriber Lifetime (s). 0 for disabled': '订阅者生命周期（秒）。0 为禁用。',
     'Subscribers': '订阅者',
+    'Default Data Format': '默认数据格式',
+    'JSON (Compressed by Deflate)': 'JSON (使用 Deflate 压缩数据)',
+    'JSON (Compressed by GZip)': 'JSON (使用 GZip 压缩数据)',
+    'Binary': '二进制',
+    'Post beacons': '发送信标',
+    'Post locators': '发送基站',
   },
 });

@@ -1,7 +1,6 @@
 interface ILocatorsResult {
   type: 'locators';
   data: {
-    [mac: string]: ILocator;
+    [IpAddressV4: string]: ILocator;
   };
-  timestamp: number;
 }
