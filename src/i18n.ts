@@ -7,6 +7,7 @@ export const i18n = generateI18n({
     'Port to bind for UDP broker': 'UDP 代理绑定端口',
     'Max Number of Subscribers. Zero for unlimited': '最大订阅数量。0 为不限制。',
     'Post outdated tags': '发送过期信标数据',
+    'Post offline locators': '发送离线基站',
     'Subscriber Lifetime (s). 0 for disabled': '订阅者生命周期（秒）。0 为禁用。',
     'Subscribers': '订阅者',
     'Default Data Format': '默认数据格式',

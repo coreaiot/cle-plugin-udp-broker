@@ -315,7 +315,7 @@ export async function init(self: Plugin, utils: Utils) {
       const now = new Date().getTime();
       const ts = now - utils.projectEnv.locatorLifeTime;
 
-      const buf = utils.ca.getLocatorsBuffer(0);
+      const buf = utils.ca.getLocatorsBuffer(config.postOfflineLocators ? 0 : ts);
 
       if (buf.length <= 5) return;
 

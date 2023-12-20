@@ -73,5 +73,11 @@ export const config = generateConfig({
       description: 'Post outdated tags',
       value: false,
     },
+    {
+      name: 'postOfflineLocators',
+      type: 'switch',
+      description: 'Post offline locators',
+      value: false,
+    },
   ],
 });
