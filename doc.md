@@ -58,3 +58,4 @@ Default to `Client side IP`:`Client side port`.
 
 
 <!-- import doc 'docs/dataStructureJSON.md' -->
+<!-- import doc 'docs/dataStructureBinary.md' -->
